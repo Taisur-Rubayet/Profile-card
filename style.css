@@ -119,7 +119,32 @@ body {
   text-decoration: none; /* remove underline */
 }
 
-#madeByPage:hover {
-  text-decoration: underline; /* optional hover */
-  color: #ffd700;             /* optional hover color */
+/* ===== Made by Taisur Rubayet animated link ===== */
+#madeByPage {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 14px;
+  color: #efec33;
+  text-shadow: 1px 1px 2px #000;
+  z-index: 9999;
+  pointer-events: auto;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s, color 0.3s;
 }
+
+#madeByPage:hover {
+  color: #ffd700;
+  transform: scale(1.2) rotate(-2deg);
+  text-decoration: underline;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 1px 1px 2px #000; color: #efec33; }
+  50% { text-shadow: 2px 2px 6px #ffd700; color: #fff200; }
+  100% { text-shadow: 1px 1px 2px #000; color: #efec33; }
+}
+
+
