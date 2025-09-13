@@ -119,6 +119,114 @@ body {
   text-decoration: none; /* remove underline */
 }
 
+body {
+  margin:0; font-family:'Poppins',sans-serif;
+  display:flex; justify-content:center; align-items:center;
+  min-height:100vh; 
+  background: linear-gradient(135deg,#5f0f40,#3cba92);
+  flex-direction:column; gap:20px; padding:20px;
+  transition: background 1s ease;
+}
+
+.card {
+  background: linear-gradient(145deg,#5f0f40,#3cba92);
+  padding:25px; border-radius:20px;
+  text-align:center; color:#fff; width:360px;
+  box-shadow:0 0 30px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+.profile-img { 
+  width:150px; height:150px; border-radius:50%; object-fit:cover;
+  border:3px solid #00fff7; margin-bottom:10px; 
+  box-shadow:0 0 12px #00fff7; transition:0.3s;
+  cursor:pointer;
+}
+
+.profile-img:hover { 
+  transform:scale(1.1); 
+  box-shadow:0 0 20px #00fff7;
+}
+
+.name { font-size:22px; font-weight:600; margin-bottom:15px; cursor:pointer;}
+
+.links { display:flex; flex-wrap:wrap; justify-content:center; gap:15px;}
+
+.link-item { 
+  display:flex; flex-direction:column; align-items:center; color:#fff; 
+  text-decoration:none; font-size:12px; transition:0.3s; width:60px;
+}
+
+.link-item img { 
+  width:50px; height:50px; 
+  filter:drop-shadow(0 0 2px #00fff7); 
+  transition: all 0.3s ease;
+}
+
+.link-item:hover img { 
+  transform:scale(1.3); 
+  filter:drop-shadow(0 0 12px #00fff7) drop-shadow(0 0 20px #00fff7);
+}
+
+.link-item:hover span { 
+  text-shadow: 0 0 6px #00fff7, 0 0 12px #00fff7;
+}
+
+/* Contact button style */
+.contact-toggle {
+  margin-top:20px;
+  background:#00fff7;
+  color:#000;
+  font-weight:600;
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-toggle:hover {
+  background:#02c7b9;
+  color:#fff;
+}
+
+/* Hidden form by default */
+.contact-form {
+  display:none;
+  flex-direction:column;
+  gap:10px;
+  margin-top:15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  font-size:14px;
+}
+
+.contact-form button {
+  background:#00fff7;
+  color:#000;
+  font-weight:600;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-form button:hover {
+  background:#02c7b9;
+  color:#fff;
+}
 /* ===== Made by Taisur Rubayet animated link ===== */
 #madeByPage {
   position: fixed;
@@ -146,5 +254,3 @@ body {
   50% { text-shadow: 2px 2px 6px #ffd700; color: #fff200; }
   100% { text-shadow: 1px 1px 2px #000; color: #efec33; }
 }
-
-
